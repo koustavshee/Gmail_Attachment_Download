@@ -37,7 +37,7 @@ try:
     if typ != 'OK':
         print('Not able to sign in!')
     
-    imapSession.select('inbox')
+    imapSession.select('inbox') # use '[Gmail]/All Mail' for accessing all mail insted of 'inbox'
     typ, data = imapSession.search(None, 'ALL')
     if typ != 'OK':
         print('Error searching Inbox.')
